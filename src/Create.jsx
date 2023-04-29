@@ -25,13 +25,13 @@ const navigate = useNavigate()
             <h3>Add new user</h3>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlfor="name">Name:  </label>
+                    <label htmlFor="name">Name:  </label>
                     <input type="text" name='name' className='form-control' placeholder='enter name'
                    onChange={e => setName(e.target.value)}  />
             
                 </div>
                 <div>
-                    <label htmlfor="name">Email:  </label>
+                    <label htmlFor="name">Email:  </label>
                     <input type="email" name='email' className='form-control' placeholder='enter email'
                      onChange={e => setEmail(e.target.value)}  />
                   
