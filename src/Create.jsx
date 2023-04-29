@@ -5,15 +5,15 @@ import { useNavigate } from 'react-router-dom';
 
 
 function Create() {
-    const [name,setName] = useState('');
-    const [email,setEmail] = useState('');
-
+    const [name,setName] = useState('')
+    const [email,setEmail] = useState('')
+const users = useSelector((state) => state.users);
     const dispatch = useDispatch();
-const navigate = useNavigate();
+const navigate = useNavigate()
 
    const handleSubmit = (event) => {
        
-            event.preventDeafult();
+            event.preventDefault();
             dispatch(addUser({id: users[users.length - 1].id +1 ,  name, email}))
             navigate('/')
    }
@@ -32,7 +32,7 @@ const navigate = useNavigate();
                 </div>
                 <div>
                     <label htmlfor="name">Email:  </label>
-                    <input type="email" email='email' className='form-control' placeholder='enter email'
+                    <input type="email" name='email' className='form-control' placeholder='enter email'
                      onChange={e => setEmail(e.target.value)}  />
                   
                 </div> <br/>
